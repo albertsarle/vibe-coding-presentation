@@ -203,6 +203,17 @@
             font-weight: 600;
             margin: 30px 0;
         }
+
+        .game-link {
+            color: #84fab0; /* A light color that contrasts with the demo-box background */
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .game-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -210,17 +221,15 @@
         <!-- Slide 1: Portada -->
         <div class="slide active">
             <h1>🎮 Vibe Coding</h1>
-            <div class="subtitle">Creando un juego de cartas con Claude Code</div>
-            <div class="demo-box">
-                "Programa sin programar" <br>
-                Deja que la IA haga el trabajo pesado
+            <div class="subtitle">Creando un juego de cartas con Claude Code : <a href="https://trentau.albertsarle.com" target="_blank">El Trenta-U</a></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://trentau.albertsarle.com" target="_blank">
+                    <img src="imatges/trentau_mobile.png" alt="Mobile Game" style="max-height: 40vh; width: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                </a>
             </div>
-            <div style="text-align: center; margin-top: 40px; font-size: 1.3em; color: #666;">
-                <p>Una introducción práctica a la programación asistida por IA</p>
-            </div>
+
             <div style="position: absolute; bottom: 80px; left: 0; right: 0; text-align: center;">
-                <p style="font-size: 1.4em; color: #333; font-weight: 600; margin-bottom: 10px;">Albert Sarlé</p>
-                <p style="font-size: 1.2em; color: #667eea; font-weight: 500;">@albertsarle</p>
+                <p style="font-size: 1.4em; color: #333; font-weight: 600; margin-bottom: 10px;"><a href="https://albertsarle.com" target="_blank">Albert Sarlé</a></p>
             </div>
             <div class="slide-number">1/13</div>
         </div>
@@ -235,12 +244,12 @@
                         <p style="font-size: 1.1em;">Qué es vibe coding y por qué es revolucionario</p>
                     </div>
                     <div class="card" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-left: 5px solid #764ba2;">
-                        <h3 style="margin-top: 0;">🛠️ Setup (10 min)</h3>
+                        <h3 style="margin-top: 0;">🛠️ Setup (5 min)</h3>
                         <p style="font-size: 1.1em;">Instalación de Node.js, Claude Code y Git (opcional)</p>
                     </div>
                     <div class="card" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-left: 5px solid #667eea;">
-                        <h3 style="margin-top: 0;">🎮 Demo en Vivo (10 min)</h3>
-                        <p style="font-size: 1.1em;">Mi proceso creando el juego de cartas - mostrar código real</p>
+                        <h3 style="margin-top: 0;">🎮 Demo en Vivo (15 min)</h3>
+                        <p style="font-size: 1.1em;">Mi proceso creando el juego de cartas - mostrar código real. Crear un juego nuevo</p>
                     </div>
                     <div class="card" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-left: 5px solid #764ba2;">
                         <h3 style="margin-top: 0;">💡 Tips y Mejores Prácticas (5 min)</h3>
@@ -252,7 +261,7 @@
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 25px; font-size: 1.2em; color: #667eea; font-weight: 600;">
-                    ⏱️ Duración total: ~35 minutos
+                    ⏱️ Duración total: ~40 minutos
                 </div>
             </div>
             <div class="slide-number">2/13</div>
@@ -339,6 +348,10 @@
                 <p style="font-size: 1.3em; margin-bottom: 20px;">Antes de empezar, necesitas tener instalado:</p>
                 <div class="grid-2">
                     <div class="card">
+                        <h3>📝 VS Code </h3>
+                        <p>Editor con terminal y git integrado (opcional)</p>
+                    </div>
+                    <div class="card">
                         <h3>🟢 Node.js</h3>
                         <p>Runtime de JavaScript (v18 o superior)</p>
                     </div>
@@ -347,12 +360,20 @@
                         <p>Control de versiones (opcional pero recomendado)</p>
                     </div>
                     <div class="card">
+                        <h3>📦 Github</h3>
+                        <p>Control de versiones en red (opcional pero recomendado)</p>
+                    </div>
+                    <div class="card">
                         <h3>🔑 API Key de Anthropic</h3>
                         <p>Para usar Claude Code</p>
                     </div>
                     <div class="card">
                         <h3>💻 Terminal</h3>
                         <p>CMD o PowerShell</p>
+                    </div>
+                    <div class="card">
+                        <h3>🖥️ Un servidor</h3>
+                        <p>Propio o tipo Netlify (opcional pero recomendado)</p>
                     </div>
                 </div>
             </div>
@@ -383,9 +404,8 @@
 
         <!-- Slide 8: Instalación Claude Code -->
         <div class="slide">
-            <h2><span class="step-number">2</span>Instalar Claude Code</h2>
+            <h2><span class="step-number">2</span>Instalar Claude Code y Obtener API Key</h2>
             <div class="content">
-                <h3>Obtener API Key</h3>
                 <div class="card" style="background: #f3e5f5;">
                     <p style="font-size: 1.3em; margin-bottom: 15px;">🔑 <strong>Crear cuenta y obtener API key:</strong></p>
                     <div style="background: white; padding: 15px; border-radius: 8px; font-size: 1.2em;">
